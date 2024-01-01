@@ -1,0 +1,25 @@
+{
+ "content": null,
+ "creation": "2023-06-20 15:48:14.667704",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-12-29 11:08:03.009119",
+ "modified_by": "Administrator",
+ "module": "Nextai Attendance",
+ "name": "mark-attendance",
+ "owner": "Administrator",
+ "page_name": "mark-attendance",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Employee"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

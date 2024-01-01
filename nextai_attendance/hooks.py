@@ -122,13 +122,16 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+    "File": {
+        "after_insert": "nextai_attendance.utils.process_file"
+    }
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
-# }
+}
 
 # Scheduled Tasks
 # ---------------

@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-09-25 14:20:27.568414",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-12-29 11:23:18.387669",
+ "modified_by": "Administrator",
+ "module": "Nextai Attendance",
+ "name": "enroll-face-to-user",
+ "owner": "Administrator",
+ "page_name": "Enroll Face to User",
+ "roles": [
+  {
+   "role": "Employee"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Enroll User"
+}

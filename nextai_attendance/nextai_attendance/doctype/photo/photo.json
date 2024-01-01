@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-07 19:29:40.498094",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "photo",
+  "is_processed",
+  "number_of_times_processed",
+  "people",
+  "objects",
+  "preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "photo",
+   "fieldtype": "Link",
+   "label": "Photo",
+   "options": "File",
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_processed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Processed"
+  },
+  {
+   "default": "0",
+   "fieldname": "number_of_times_processed",
+   "fieldtype": "Int",
+   "label": "Number of times Processed"
+  },
+  {
+   "fieldname": "people",
+   "fieldtype": "Table",
+   "label": "People",
+   "options": "ROI Person"
+  },
+  {
+   "fieldname": "objects",
+   "fieldtype": "Table",
+   "label": "Objects",
+   "options": "ROI Object"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "HTML",
+   "label": "Preview",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-03 23:27:10.955697",
+ "modified_by": "Administrator",
+ "module": "Nextai Attendance",
+ "name": "Photo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
