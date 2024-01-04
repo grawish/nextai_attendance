@@ -20,10 +20,12 @@ def enroll_user(**kwargs):
     for photo_name in images:
         photo=frappe.get_doc('Photo',{'photo':photo_name})
         if len(photo.people)>1:
-            return {"error":"More than one faces detected,\nkindly re-upload!"}
+            raise frappe.ValidationError("More than one faces detected, kindly re-upload!")
         if len(photo.people)<1:
-            return {"error": "No Face Detected,\nkindly re-upload!"}
+            raise frappe.ValidationError("No face detected, kindly re-upload!")
         roi = frappe.get_doc('ROI', photo.people[0].face)
         roi.person = person
         roi.save(ignore_permissions=True)
+    person.enrolled=True
+    person.save(ignore_permissions=True)
     return True

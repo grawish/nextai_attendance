@@ -9,7 +9,8 @@
  "field_order": [
   "user",
   "person_name",
-  "person_image"
+  "person_image",
+  "enrolled"
  ],
  "fields": [
   {
@@ -28,11 +29,17 @@
    "fieldname": "person_image",
    "fieldtype": "Attach Image",
    "label": "Profile Pic"
+  },
+  {
+   "default": "0",
+   "fieldname": "enrolled",
+   "fieldtype": "Check",
+   "label": "Enrolled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-29 10:26:14.471817",
+ "modified": "2024-01-04 11:02:12.951426",
  "modified_by": "Administrator",
  "module": "Nextai Attendance",
  "name": "Person",
