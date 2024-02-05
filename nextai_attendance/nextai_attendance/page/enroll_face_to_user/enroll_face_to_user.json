@@ -4,15 +4,21 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-12-29 11:23:18.387669",
+ "modified": "2024-02-05 14:59:11.336548",
  "modified_by": "Administrator",
  "module": "Nextai Attendance",
  "name": "enroll-face-to-user",
  "owner": "Administrator",
- "page_name": "Enroll Face to User",
+ "page_name": "enroll-face-to-user",
  "roles": [
   {
    "role": "Employee"
+  },
+  {
+   "role": "Maintenance User"
+  },
+  {
+   "role": "System Manager"
   }
  ],
  "script": null,

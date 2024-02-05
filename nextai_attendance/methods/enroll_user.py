@@ -10,7 +10,7 @@ def enroll_user(**kwargs):
     user = frappe.session.user
     user_exists = frappe.db.exists('Person',{'user':user})
     if user_exists:
-        person = frappe.get_value('Person',{'user':user})
+        person = frappe.get_doc('Person',{'user':user})
     else:
         person = frappe.new_doc('Person')
         person.user = user
@@ -24,8 +24,21 @@ def enroll_user(**kwargs):
         if len(photo.people)<1:
             raise frappe.ValidationError("No face detected, kindly re-upload!")
         roi = frappe.get_doc('ROI', photo.people[0].face)
-        roi.person = person
+        roi.person = person.name
         roi.save(ignore_permissions=True)
     person.enrolled=True
     person.save(ignore_permissions=True)
     return True
+
+@frappe.whitelist()
+def is_user_enrolled():
+    user = frappe.session.user
+    user_exists = frappe.db.exists('Person',{'user':user})
+    if user_exists:
+        person = frappe.get_doc('Person',{'user':user})
+        if person.enrolled:
+            return True
+        else:
+            return False
+    else:
+        return False

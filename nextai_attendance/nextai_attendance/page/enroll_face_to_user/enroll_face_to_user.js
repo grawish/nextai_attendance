@@ -134,11 +134,14 @@ frappe.pages['enroll-face-to-user'].on_page_load = function (wrapper) {
                 } else {
                     reject('Unknown Error')
                 }
+            },
+            error: (e) => {
+                reject(e.exception.split(":")[1].trim())
             }
         })).then(() => {
             alert('User Enrolled!')
             removeLoader();
-            frappe.set_route(["Workspaces", "Home"]);
+            frappe.set_route(["desk"]);
         }).catch((e) => {
             alert(e)
             window.location.reload();
