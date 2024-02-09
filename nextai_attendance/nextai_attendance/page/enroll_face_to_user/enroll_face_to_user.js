@@ -141,7 +141,7 @@ frappe.pages['enroll-face-to-user'].on_page_load = function (wrapper) {
         })).then(() => {
             alert('User Enrolled!')
             removeLoader();
-            frappe.set_route(["desk"]);
+            window.location.href = "/desk"
         }).catch((e) => {
             alert(e)
             window.location.reload();
