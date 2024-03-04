@@ -35,7 +35,7 @@ class ROI(Document):
             )
             unknown_encoding = json.loads(self.encoding)
             matches = face_recognition.compare_faces(
-                np.asarray(known_face_encodings), np.asarray(unknown_encoding)
+                np.asarray(known_face_encodings), np.asarray(unknown_encoding), tolerance=0.4
             )
             # # If a match was found in known_face_encodings, just use the first one.
             if True in matches:

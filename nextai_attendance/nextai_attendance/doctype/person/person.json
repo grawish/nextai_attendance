@@ -22,6 +22,7 @@
   {
    "fieldname": "person_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Person Name",
    "unique": 1
   },
@@ -34,12 +35,13 @@
    "default": "0",
    "fieldname": "enrolled",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Enrolled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 11:02:12.951426",
+ "modified": "2024-03-04 17:30:52.879742",
  "modified_by": "Administrator",
  "module": "Nextai Attendance",
  "name": "Person",

@@ -40,7 +40,7 @@ def process_photo(photo: Photo):
         image, filename, extn = get_local_image(frappe.db.get_value("File",photo.photo, "file_url"))
         img=np.asarray(image)
         boxes = face_recognition.face_locations(img)
-        encodings = face_recognition.face_encodings(img,boxes)
+        encodings = face_recognition.face_encodings(img,boxes, num_jitters=100, model="large")
 
         for (encoding, location) in zip(encodings, boxes):
             roi = frappe.new_doc("ROI")
