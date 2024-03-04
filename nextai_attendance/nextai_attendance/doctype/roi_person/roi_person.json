@@ -7,7 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "face"
+  "person_name",
+  "face",
+  "person"
  ],
  "fields": [
   {
@@ -16,12 +18,27 @@
    "in_list_view": 1,
    "label": "Face",
    "options": "ROI"
+  },
+  {
+   "fetch_from": "face.person",
+   "fieldname": "person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Person",
+   "options": "Person"
+  },
+  {
+   "fetch_from": "person.person_name",
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Person Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-13 13:52:55.047270",
+ "modified": "2024-03-04 17:03:05.888154",
  "modified_by": "Administrator",
  "module": "Nextai Attendance",
  "name": "ROI Person",

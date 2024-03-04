@@ -11,8 +11,8 @@
   "encoding",
   "location",
   "preview",
-  "related_information_section",
-  "person"
+  "person",
+  "person_name"
  ],
  "fields": [
   {
@@ -41,22 +41,22 @@
    "label": "Preview"
   },
   {
-   "collapsible": 1,
-   "fieldname": "related_information_section",
-   "fieldtype": "Section Break",
-   "label": "Related Information"
-  },
-  {
    "fieldname": "person",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Person",
    "options": "Person"
+  },
+  {
+   "fetch_from": "person.person_name",
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "label": "Person Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-13 13:51:06.588412",
+ "modified": "2024-03-04 17:03:51.218366",
  "modified_by": "Administrator",
  "module": "Nextai Attendance",
  "name": "ROI",
