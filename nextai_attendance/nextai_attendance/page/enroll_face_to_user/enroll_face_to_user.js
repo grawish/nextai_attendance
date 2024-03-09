@@ -119,7 +119,7 @@ frappe.pages['enroll-face-to-user'].on_page_load = function (wrapper) {
                 resolve(r);
             })
         }).catch((e) => {
-            alert('Validation ' + e)
+            alert('Validation ' + e.message);
             window.location.reload();
         });
 
